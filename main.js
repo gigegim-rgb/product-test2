@@ -1,5 +1,6 @@
 const prayerInput = document.getElementById('prayer-input');
 const submitPrayer = document.getElementById('submit-prayer');
+const newPrayer = document.getElementById('new-prayer');
 const responseArea = document.getElementById('response-area');
 const bibleVerse = document.getElementById('bible-verse');
 const verseCitation = document.getElementById('verse-citation');
@@ -26,7 +27,6 @@ const bibleData = {
 submitPrayer.addEventListener('click', () => {
     const prayerText = prayerInput.value;
 
-    // 기도 내용이 없으면 아무것도 하지 않습니다.
     if (!prayerText.trim()) {
         return;
     }
@@ -45,14 +45,20 @@ submitPrayer.addEventListener('click', () => {
         bibleVerse.textContent = `"${data.verse}"`;
         verseCitation.textContent = data.citation;
         verseContext.textContent = data.context;
-        responseArea.classList.remove('hidden');
     } else {
         bibleVerse.textContent = '당신의 기도에 맞는 말씀을 찾지 못했습니다. 다른 표현으로 다시 시도해보세요.';
         verseCitation.textContent = '';
         verseContext.textContent = '';
-        responseArea.classList.remove('hidden');
     }
 
-    // 다음 기도를 위해 입력창을 비웁니다.
+    responseArea.classList.remove('hidden');
+    newPrayer.classList.remove('hidden');
+    submitPrayer.classList.add('hidden');
     prayerInput.value = '';
+});
+
+newPrayer.addEventListener('click', () => {
+    responseArea.classList.add('hidden');
+    newPrayer.classList.add('hidden');
+    submitPrayer.classList.remove('hidden');
 });
