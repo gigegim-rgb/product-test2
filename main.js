@@ -25,6 +25,12 @@ const bibleData = {
 
 submitPrayer.addEventListener('click', () => {
     const prayerText = prayerInput.value;
+
+    // 기도 내용이 없으면 아무것도 하지 않습니다.
+    if (!prayerText.trim()) {
+        return;
+    }
+
     let foundKeyword = null;
 
     for (const keyword in bibleData) {
@@ -46,4 +52,7 @@ submitPrayer.addEventListener('click', () => {
         verseContext.textContent = '';
         responseArea.classList.remove('hidden');
     }
+
+    // 다음 기도를 위해 입력창을 비웁니다.
+    prayerInput.value = '';
 });
