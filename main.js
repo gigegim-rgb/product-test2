@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // 페이지가 로드될 때 응답 영역과 '또 다른 기도' 버튼을 숨깁니다.
+    responseArea.classList.add('hidden');
+    newPrayer.classList.add('hidden');
+});
+
 const prayerInput = document.getElementById('prayer-input');
 const submitPrayer = document.getElementById('submit-prayer');
 const newPrayer = document.getElementById('new-prayer');
