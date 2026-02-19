@@ -87,7 +87,9 @@ button:hover {
 #bible-image {
     width: 100%;
     max-width: 400px;
-    height: auto;
+    height: 200px; /* 이미지 높이 제한 */
+    object-fit: cover; /* 이미지가 잘리도록 설정 */
+    object-position: center 70%; /* 이미지의 아랫부분을 표시 */
     display: block;
     margin: 20px auto;
     border-radius: 5px;
