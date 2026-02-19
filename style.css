@@ -1,86 +1,121 @@
+/* 기본 스타일 */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
 }
 
 .container {
-    background-color: white;
+    background: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
     max-width: 600px;
-    width: 90%;
+    text-align: center;
 }
 
 h1 {
-    color: #5a5a5a;
+    color: #5a2d2d;
     font-size: 2em;
 }
 
 p {
-    color: #666;
     font-size: 1.1em;
 }
 
 textarea {
     width: 100%;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 15px;
     margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    min-height: 100px;
     box-sizing: border-box;
 }
 
 .button-group {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 10px; /* 버튼 사이의 간격 추가 */
 }
 
 button {
-    background-color: #5c67f2;
+    background-color: #8d6e63;
     color: white;
+    padding: 12px 25px;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1em;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #4a54e1;
+    background-color: #6d4c41;
 }
 
+/* 숨김 클래스 */
+.hidden {
+    display: none;
+}
+
+/* 응답 영역 스타일 */
 #response-area {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: left;
     padding: 20px;
     background-color: #fafafa;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+#response-area h2 {
+    text-align: center;
+    color: #5a2d2d;
+}
+
+#bible-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
     border-radius: 5px;
 }
 
 #bible-verse {
     font-size: 1.2em;
     font-style: italic;
+    margin-bottom: 10px;
 }
 
 #verse-citation {
     display: block;
     text-align: right;
-    margin-top: 10px;
     font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-.hidden {
-    display: none;
+#verse-context {
+    font-size: 1em;
+    color: #666;
+}
+
+#new-prayer {
+  background-color: #a1887f; /* 다른 색상으로 변경 */
+}
+
+#new-prayer:hover {
+  background-color: #8d6e63;
 }
