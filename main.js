@@ -5,6 +5,7 @@ const responseArea = document.getElementById('response-area');
 const bibleVerse = document.getElementById('bible-verse');
 const verseCitation = document.getElementById('verse-citation');
 const verseContext = document.getElementById('verse-context');
+const bibleImage = document.getElementById('bible-image');
 
 const bibleData = {
     '사랑': {
@@ -45,10 +46,12 @@ submitPrayer.addEventListener('click', () => {
         bibleVerse.textContent = `"${data.verse}"`;
         verseCitation.textContent = data.citation;
         verseContext.textContent = data.context;
+        bibleImage.classList.remove('hidden');
     } else {
         bibleVerse.textContent = '당신의 기도에 맞는 말씀을 찾지 못했습니다. 다른 표현으로 다시 시도해보세요.';
         verseCitation.textContent = '';
         verseContext.textContent = '';
+        bibleImage.classList.add('hidden');
     }
 
     responseArea.classList.remove('hidden');
