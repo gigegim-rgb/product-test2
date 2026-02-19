@@ -5,11 +5,10 @@ const responseArea = document.getElementById('response-area');
 const bibleVerse = document.getElementById('bible-verse');
 const verseCitation = document.getElementById('verse-citation');
 const verseContext = document.getElementById('verse-context');
-const bibleImage = document.getElementById('bible-image');
 
 const bibleData = {
     '사랑': {
-        verse: '하나님이 세상을 이처럼 사랑하sa독생자를 주셨으니 이는 그를 믿는 자마다 멸망하지 않고 영생을 얻게 하려 하심이라',
+        verse: '하나님이 세상을 이처럼 사랑하사 독생자를 주셨으니 이는 그를 믿는 자마다 멸망하지 않고 영생을 얻게 하려 하심이라',
         citation: '요한복음 3:16',
         context: '혹시 스스로가 사랑받을 가치가 없다고 느껴지시나요? 이 말씀은 세상 그 무엇과도 비교할 수 없는 하나님의 크신 사랑을 보여줍니다. 하나님께서는 당신을 너무나도 사랑하셔서, 가장 귀한 아들 예수님을 우리에게 보내주셨습니다. 이 사실은 당신이 얼마나 소중한 존재인지를 증명합니다. 하나님의 사랑은 우리의 어떠한 조건이나 자격과 상관없이 주어지는 선물입니다. 그 사랑을 믿고 받아들일 때, 우리는 모든 죄와 절망에서 벗어나 영원한 생명을 누릴 수 있습니다.'
     },
@@ -46,7 +45,6 @@ submitPrayer.addEventListener('click', () => {
         bibleVerse.textContent = `"${data.verse}"`;
         verseCitation.textContent = data.citation;
         verseContext.textContent = data.context;
-        bibleImage.classList.remove('hidden');
     } else {
         const keywords = Object.keys(bibleData);
         const randomKeyword = keywords[Math.floor(Math.random() * keywords.length)];
@@ -54,7 +52,6 @@ submitPrayer.addEventListener('click', () => {
         bibleVerse.textContent = `"${data.verse}"`;
         verseCitation.textContent = data.citation;
         verseContext.textContent = data.context;
-        bibleImage.classList.remove('hidden'); 
     }
 
     responseArea.classList.remove('hidden');
